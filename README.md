@@ -87,3 +87,29 @@ BACKEND/
 
 ![updateUserById](https://github.com/user-attachments/assets/5f193b58-e1e3-4a11-be67-4f18ab94eee8)
 
+
+<h1>One-to-One Relationship</h1>
+<h2>Use case</h2>
+<ul>
+  <li>Each `User` has **exactly one** `Profile`.</li>
+
+ <li>The `Profile` stores extra info like bio, age, social links, etc.<li>
+</ul>
+<h3>✅ 1) User Schema</h3>
+<p>Basic info like <code>username</code> and <code>email</code>.</p>
+
+<h3>✅ 2) Profile Schema</h3>
+<p>Extra info:</p>
+<ul>
+  <li><code>bio</code></li>
+  <li><code>age</code></li>
+  <li><code>user</code> → references the User’s <code>_id</code>.</li>
+</ul>
+
+<h3>✅ 3) Create Data</h3>
+<ul>
+  <li>First save the <strong>User</strong></li>
+  <li>Then save a <strong>Profile</strong> linked to that user.</li>
+</ul>
+
+
